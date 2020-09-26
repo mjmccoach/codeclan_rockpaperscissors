@@ -6,7 +6,11 @@ from app.models.game import *
 
 @app.route('/')
 def index():
-    return render_template('index.html')    
+    return render_template('index.html') 
+
+@app.route('/rules')
+def result():
+    return render_template('rules.html')   
 
 
 @app.route('/result', methods = ["POST"])
