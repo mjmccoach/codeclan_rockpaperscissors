@@ -8,12 +8,12 @@ class Game:
     def play(self, player1, player2):
    
         if player1.choice == "Paper" and player2.choice == "Rock":
-            return player1.name + " wins with " + player1.choice + "!"
+            return player1.name + " chose " + player1.choice + " " + player2.name + " chose " + player2.choice + " " + player1.name + " wins with " + player1.choice + "!"
         elif player1.choice == "Scissors" and player2.choice == "Paper":
             return player1.name + " wins with " + player1.choice + "!"
         elif player1.choice == "Rock" and player2.choice == "Scissors":
             return player1.name + " wins with " + player1.choice + "!"
         elif player1.choice == player2.choice:
-            return "We have a draw here folks!"
+            return None
         else:
             return player2.name + " wins with " + player2.choice + "!"

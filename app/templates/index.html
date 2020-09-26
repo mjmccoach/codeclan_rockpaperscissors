@@ -19,12 +19,12 @@
     </header>
     <form action="/result" method = "POST"></form>
     
-    <li><label for="player_name">Name</label>
-        <input type="text" name = "player_name" id = "player_name">
+    <li><label for="player1">Name</label>
+        <input type="text" name = "player1" id = "player1">
     </li>
     
-    <li><label for="player_choice">Make your choice</label>
-        <select name="player_choice" id="player_choice">
+    <li><label for="choice1">Make your choice</label>
+        <select name="choice1" id="choice1">
             
             <option disabled = "disabled" selected = "selected" value = > Please select your choice</option>
             <option value="Rock"> Rock</option>
@@ -35,12 +35,12 @@
         </select>
     </li>
 
-    <li><label for="player_name"> Name </label>
-        <input type="text" name = "player_name" id = player_name>
+    <li><label for="player2"> Name </label>
+        <input type="text" name = "player2" id = "player2">
      </li>
 
-    <li><label for="player_choice">Make your choice</label>
-        <select name="player_choice" id="player_choice">
+    <li><label for="choice2">Make your choice</label>
+        <select name="choice2" id="choice2">
 
             <option disabled= "disabled" selected = "selected" value = > Please select your choice</option>
             <option value="Rock"> Rock</option>
@@ -49,7 +49,9 @@
 
         </select>
     <br>
-        <button id = "submit" > Lets play! </button>
+        <button type = "submit"> Lets play! </button>
     </li> 
+
+    {{ result }}
 </body>
 </html>
