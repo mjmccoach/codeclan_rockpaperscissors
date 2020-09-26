@@ -6,7 +6,50 @@
     <title>CodeClan RockPaperScissors</title>
 </head>
 <body>
-    Harrison Rules
+    <header>
+
+        <h1>CodeClan Rock Paper Scissors Showdown!</h1>
+        
+        <nav>
+            <li>
+                <a href="Rules">Rules</a>
+            </li>
+        </nav>
+
+    </header>
+    <form action="/result" method = "POST"></form>
     
+    <li><label for="player_name">Name</label>
+        <input type="text" name = "player_name" id = "player_name">
+    </li>
+    
+    <li><label for="player_choice">Make your choice</label>
+        <select name="player_choice" id="player_choice">
+            
+            <option disabled = "disabled" selected = "selected" value = > Please select your choice</option>
+            <option value="Rock"> Rock</option>
+            <option value="Paper"> Paper</option>
+            <option value="Scissors"> Scissors</option>
+
+
+        </select>
+    </li>
+
+    <li><label for="player_name"> Name </label>
+        <input type="text" name = "player_name" id = player_name>
+     </li>
+
+    <li><label for="player_choice">Make your choice</label>
+        <select name="player_choice" id="player_choice">
+
+            <option disabled= "disabled" selected = "selected" value = > Please select your choice</option>
+            <option value="Rock"> Rock</option>
+            <option value="Paper"> Paper</option>
+            <option value="Scissors"> Scissors</option>
+
+        </select>
+    <br>
+        <button id = "submit" > Lets play! </button>
+    </li> 
 </body>
 </html>
