@@ -12,17 +12,13 @@ def index():
 def result():
     return render_template('rules.html')   
 
-
-@app.route('/result', methods = ["POST"])
-def rps_game():
-    
-    name1 = request.form["name1"]
-    choice1 = request.form["choice1"]
-    name2 = request.form["name2"]
-    choice2 = request.form["choice2"]
-
-    new_game = Game(player1,player2)
-    
-    result = new_game.play(player1,player2)
-
-    return render_template('result.html', result = result)
+@app.route('/<name1>/<choice1>/<name2>/<choice2>')
+def rps_game(name1,choice1,name2,choice2):
+   player1 = Player(name1, choice1)
+   player2 = Player(name2, choice2)
+ 
+   rps_game = Game(player1,player2)
+ 
+   rps_result = rps_game.play(player1, player2)
+ 
+   return render_template('index.html', result= rps_result)
