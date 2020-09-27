@@ -9,7 +9,7 @@ def index():
     return render_template('index.html') 
 
 @app.route('/rules')
-def result():
+def rules():
     return render_template('rules.html')   
 
 @app.route('/<name1>/<choice1>/<name2>/<choice2>')
