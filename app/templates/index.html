@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="app.css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    
+
     <title>CodeClan RockPaperScissors</title>
 </head>
-<body>
+<b>
     <header>
 
         <h1>CodeClan Rock Paper Scissors Showdown!</h1>
@@ -18,10 +21,10 @@
         </nav>
 
     </header>
-    <form action="/result" method = "POST"></form>
+    <form action="/result" methods = "POST"></form>
     
-    <li><label for="player1">Name</label>
-        <input type="text" name = "player1" id = "player1">
+    <li><label for="name1">Name</label>
+        <input type="text" name = "name1" id = "name1">
     </li>
     
     <li><label for="choice1">Make your choice</label>
@@ -36,12 +39,12 @@
         </select>
     </li>
 
-    <li><label for="player2"> Name </label>
-        <input type="text" name = "player2" id = "player2">
+    <li><label for="name2"> Name </label>
+        <input type="text" name = "name2" id = "name2">
      </li>
 
     <li><label for="choice2">Make your choice</label>
-        <select name="choice2" id="choice2">
+        <select name="  choice2" id="choice2">
 
             <option disabled= "disabled" selected = "selected" value = > Please select your choice</option>
             <option value="Rock"> Rock</option>
@@ -53,6 +56,12 @@
         <button type = "submit"> Lets play! </button>
     </li> 
 
-    {{ result }}
+    {{ result }} <br>
+    {{ choice1 }} <br>
+    {{ choice2 }}
+
 </body>
+
+<footer> &#169 CodeClan Rock Paper Scissors</footer>
+
 </html>
